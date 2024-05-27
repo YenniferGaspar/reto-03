@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/contac.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <div class="navbar-header">
+                    <a class="navbar-brand topnav" href="#">Mundo Ecologico</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="frutas.html">Frutas</a>
+                        </li>
+                        <li>
+                            <a href="vegetales.html">Verduras</a>
+                        </li>
+                        <li>
+                            <a href="contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    <section>
+        <div class="container">
+            <div class="form-content">
+                <form name="registro" id="registro">
+                    <div class="formulario">
+                        <h1>Registro</h1>
+                
+                        <!-- Información Personal -->
+                        <div id="info-personal">
+                            <h2>Información Personal</h2>
+                            <label for="nombres">Nombres y Apellidos</label>
+                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres" pattern="[a-zA-Z ]+" title="Ingrese solo letras en este campo" required />
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Ingrese su Email" required />
+                            <label for="dni">N° DNI:</label>
+                            <input type="text" name="dni" id="dni" placeholder="Ingrese su número de DNI" pattern="[0-9]{8}" title="Ingrese un número de DNI válido de 8 dígitos" required />
+                            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                            <input type="date" name="fechaNacimiento" id="fechaNacimiento" required />
+                            <label for="dni">Codigo postal:</label>
+                            <input type="text" name="dni" id="dni" placeholder="Ingrese su codigo postal" pattern="[0-9]{5}" title="Ingrese un número de codigo postalválido de 5 dígitos" required />
+                            <label for="nombres">Comentario</label>
+                            <input type="text" name="nombres" id="nombres" placeholder="Ingrese su Comentario" pattern="[a-zA-Z ]+" title="Ingrese solo letras en este campo" required />
+                            <button type="submit" >Registrarme</button>
+                        </div>
+                    </div>
+                </form>             
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="vegetales.html">Verduras</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="frutas.html">Frutas</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Todo ecologico 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

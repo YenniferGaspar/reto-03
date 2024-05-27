@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	text-transform: capitalize;
+	text-decoration:none;
+	outline: none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	
+}
+
+*::selection {
+	background:#de0a0a;
+	color:#fff;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #de0a0a;
+    color: white;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 1em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    right: 1em; /* Posiciona el botón a la derecha */
+    top: 1em;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+}
+
+header .navbar ul li a {
+    font-size: 2rem;
+    color: #fff;
+    transition: .2s;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: #de0a0a;
+}
+
+header .orden {
+    font-size: 3rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+}
+
+/* Media query para pantallas de menos de 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none; /* Eliminar este display: none */
+        width: 75%; /* Ajusta el ancho del menú según tus necesidades */
+        position: fixed;
+        right: 0; /* Cambiado a right */
+        top: 0;
+        height: 100%;
+        background-color: #de0a0a;
+        flex-direction: column;
+        padding-top: 3em;
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%); /* Cambiado a translateX(100%) */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+
+    .navbar a {
+        padding: 1em;
+        display: block;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .orden {
+        display: block;
+    }
+}
+
+/* Clase para mostrar el menú */
+.navbar.active {
+    transform: translateX(0);
+}
+
+/* Ocultar contenido principal cuando el menú está activo */
+.main-content.hidden {
+    display: none;
+}
+
+/* Estilo para mostrar/ocultar el menú */
+.menu-toggle.active + .navbar {
+    display: flex;
+}
+
+
+/* otro form*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    grid-area: content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+} 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
+    width: 100%;
+}
+
+.form-image {
+    flex: 1;
+    min-width: 500px; /* Para asegurarse de que la imagen tenga un tamaño mínimo */
+    margin-right: 20px; /* Añadir margen a la derecha para separar de formulario */
+    display: flex; /* Usa flexbox para centrar la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    position: relative;
+}
+
+.form-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra a la imagen */
+    position: relative; /* Asegura que la sombra esté detrás de la imagen */
+    z-index: 1; /* Eleva la imagen sobre la sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-content {
+    flex: 2;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    min-height: 500px; /* Establece una altura mínima para que el formulario tenga el mismo tamaño que la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.form-content h1{
+    text-align: center; /* Centra horizontalmente el primer título */
+    margin-bottom: 20px; /* Añade un margen inferior para separar del resto de los elementos */
+    text-transform: none;
+    font-size: 28px;
+}
+
+form {
+    width: 100%;
+    text-transform: none;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-top: 20px;
+    text-transform: none;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: none;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 8px; /* Reduce el padding para hacer la barra más pequeña */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduce el tamaño de fuente */
+}
+
+button {
+    margin-top: 20px;
+    background-color: #de0a0a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: none;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #b80909;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    text-transform: none;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="radio"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-transform: none;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.opciones {
+    margin-left: 5px;
+    color: #555;
+    text-transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-image {
+        order: 2;
+        margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadir margen inferior para separar de formulario */
+    }
+
+    .form-content {
+        order: 1;
+    }
+}
